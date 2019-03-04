@@ -56,6 +56,7 @@
         <td><span>{{ t.description }}</span></td>
         <td><span>{{ t.responsible }}</span></td>
         <td><span>{{ t.priority }}</span></td>
+        <td><button class="btn btn-primary" (click)="removeTodo(t)">Delete</button></td>
       </tr>
     </tbody>
   </table>

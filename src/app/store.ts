@@ -36,7 +36,7 @@ export function rootReducer(state, action) {
         lastUpdate: new Date()
       })
     case REMOVE_ALL_TODOS:
-      Object.assign(state, {}, {
+      Object.assign({}, state, {
         todos: [],
         lastUpdate: new Date()
       })

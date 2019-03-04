@@ -12,13 +12,12 @@ export class TodoOverviewComponent implements OnInit {
 
   @select() todos; 
   @select() lastUpdate;
-
   constructor(private ngRedux: NgRedux<IAppState>) { }
 
   ngOnInit() {
   }
 
-  clearTodo() {
+  clearTodos() {
     this.ngRedux.dispatch({type: REMOVE_ALL_TODOS});
   }
 

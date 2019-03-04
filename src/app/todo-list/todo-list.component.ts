@@ -36,6 +36,4 @@ export class TodoListComponent implements OnInit {
   removeTodo(todo) {
     this.ngRedux.dispatch({type: REMOVE_TODO, id: todo.id})
   }
-
-
 }
