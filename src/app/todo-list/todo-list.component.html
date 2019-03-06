@@ -55,7 +55,11 @@
         <td><span>{{ t.id }}</span></td>
         <td><span>{{ t.description }}</span></td>
         <td><span>{{ t.responsible }}</span></td>
-        <td><span>{{ t.priority }}</span></td>
+        <td>
+          <span *ngIf="t.priority == 'low'" class="badge badge-success">Low</span>
+          <span *ngIf="t.priority == 'medium'" class="badge badge-warning">Medium</span>
+          <span *ngIf="t.priority == 'high'" class="badge badge-danger">High</span>
+        </td>
         <td><button class="btn btn-primary" (click)="removeTodo(t)">Delete</button></td>
       </tr>
     </tbody>

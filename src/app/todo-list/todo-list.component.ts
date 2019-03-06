@@ -19,7 +19,7 @@ export class TodoListComponent implements OnInit {
     priority: "low",
     isCompleted: false
   }
-
+  
   constructor(private ngRedux: NgRedux<IAppState>) { }
 
   ngOnInit() {
@@ -30,7 +30,7 @@ export class TodoListComponent implements OnInit {
   }
 
   toggleTodo(todo) {
-    this.ngRedux.dispatch({type: TOGGLE_TODO, id: todo.id});
+    this.ngRedux.dispatch({type: TOGGLE_TODO, id: todo.id})
   }
 
   removeTodo(todo) {
