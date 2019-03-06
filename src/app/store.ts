@@ -31,12 +31,12 @@ export function rootReducer(state, action) {
         lastUpdate: new Date()
       })
     case REMOVE_TODO:
-      Object.assign({}, state, {
+      return Object.assign({}, state, {
         todos: state.todos.filter(t => t.id !== action.id),
         lastUpdate: new Date()
       })
     case REMOVE_ALL_TODOS:
-      Object.assign({}, state, {
+      return Object.assign({}, state, {
         todos: [],
         lastUpdate: new Date()
       })
