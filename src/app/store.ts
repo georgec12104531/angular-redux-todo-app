@@ -1,4 +1,4 @@
-import { ITodo } from './todo'
+import { ITodo } from './todo';
 import { ADD_TODO, TOGGLE_TODO, REMOVE_TODO, REMOVE_ALL_TODOS} from './actions';
 
 export interface IAppState {
@@ -12,8 +12,8 @@ export const INITIAL_STATE: IAppState = {
 }
 
 export function rootReducer(state, action) {
-  switch(action.type) {
-    case ADD_TODO: 
+  switch (action.type) {
+    case ADD_TODO:
       action.todo.id = state.todos.length + 1;
       return Object.assign({}, state, {
         todos: state.todos.concat(Object.assign({}, action.todo)),

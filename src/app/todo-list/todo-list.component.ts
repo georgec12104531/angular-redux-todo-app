@@ -10,30 +10,35 @@ import { ITodo } from '../todo';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-  @select() todos; 
+  @select() todos;
 
   model: ITodo = {
     id: 0,
-    description: "",
-    responsible: "",
-    priority: "low",
+    description: '',
+    responsible: '',
+    priority: 'low',
     isCompleted: false
+  };
+
+
+  function hello() {
+    let num = 5;
   }
-  
+ 
   constructor(private ngRedux: NgRedux<IAppState>) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    this.ngRedux.dispatch({type: ADD_TODO, todo: this.model})
+    this.ngRedux.dispatch({type: ADD_TODO, todo: this.model});
   }
 
   toggleTodo(todo) {
-    this.ngRedux.dispatch({type: TOGGLE_TODO, id: todo.id})
+    this.ngRedux.dispatch({type: TOGGLE_TODO, id: todo.id});
   }
 
   removeTodo(todo) {
-    this.ngRedux.dispatch({type: REMOVE_TODO, id: todo.id})
+    this.ngRedux.dispatch({type: REMOVE_TODO, id: todo.id});
   }
 }
